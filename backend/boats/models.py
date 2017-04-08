@@ -1,3 +1,28 @@
 from django.db import models
 
-# Create your models here.
+class Boat(models.Model):
+    vuosimalli = models.IntegerField(null=True)
+    valmistusvuosi = models.IntegerField(null=True)
+    kayttoonottovuosi = models.IntegerField(null=True)
+    paavari = models.IntegerField(null=True)
+    lisavari = models.IntegerField(null=True)
+    maxpituus = models.FloatField(null=True)
+    maxnopeus = models.IntegerField(null=True)
+    maxmoottoriteho = models.FloatField(null=True)
+    moottori_teho = models.FloatField(null=True)
+    moottori_lkm = models.IntegerField(null=True)
+    paino = models.IntegerField(null=True)
+    jokivene = models.NullBooleanField()
+    tenonvene = models.NullBooleanField()
+    vene_malli = models.CharField(null=True, max_length=99)
+    tyyppi = models.CharField(null=True, max_length=99)
+    runkotyyppi = models.IntegerField(null=True)
+    kansirakenne = models.IntegerField(null=True)
+    rungonrakmat = models.IntegerField(null=True)
+    maxhlolkm = models.IntegerField(null=True)
+    runkopituus = models.FloatField(null=True)
+    maxleveys = models.FloatField(null=True)
+    syvays = models.FloatField(null=True)
+    kayttokunta_koodi = models.IntegerField(null=True)
+    jarnro = models.IntegerField(null=True)
+
